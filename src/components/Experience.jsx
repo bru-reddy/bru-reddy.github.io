@@ -7,8 +7,8 @@ export default function Experience() {
         <div className="experience-body">
           <div className="experience-meta"><span>VIRTUAL INTERNSHIP</span><span>2026</span></div>
           <h3>Infosys Springboard Virtual Internship 7.0</h3>
-          <p>Virtual internship experience focused on structured learning, project work, and practical exposure to software development.</p>
-          <div className="experience-tags"><span>Software Development</span><span>Project Work</span><span>Technical Learning</span></div>
+          <p>Completed a structured virtual internship focused on practical software development and project-based learning. As part of the internship, developed the Intelligent Road Traffic Management System (IRTMS), a full-stack application designed to support real-time traffic monitoring, prediction, route analysis, alerts, and analytics.</p>
+          <div className="experience-tags"><span>Software Development</span><span>IRTMS Project</span><span>Full-Stack Development</span></div>
         </div>
       </article>
     </section>
