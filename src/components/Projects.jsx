@@ -39,14 +39,6 @@ const projects = [
     preview: 'https://bru-reddy.github.io/Velora/',
     label: 'AI Application',
   },
-  {
-    number: '05',
-    title: 'The Tales of History',
-    description: 'An interactive history and mythology learning platform featuring a searchable library, timelines, visual and documentary resources, contextual AI tutoring, summaries, exam notes, and related-topic exploration.',
-    stack: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'AI'],
-    github: 'https://github.com/bru-reddy/Tales-of-History',
-    label: 'Learning Platform',
-  },
 ]
 
 function GithubIcon() {
@@ -75,27 +67,18 @@ export default function Projects() {
               <span className="project-label" style={{padding:'8px 13px',borderRadius:'999px',border:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.025)',color:'#aaaab8'}}><span style={{color:'#6ee79b',marginRight:'7px'}}>●</span>{project.label}</span>
             </div>
 
-            {project.preview ? (
-              <div className="project-preview" style={{position:'relative',marginTop:'18px',aspectRatio:'16 / 9',overflow:'hidden',borderRadius:'15px',border:'1px solid rgba(255,255,255,.12)',background:'#080a10',boxShadow:'0 16px 45px rgba(0,0,0,.28)'}}>
-                <div style={{position:'absolute',inset:0,zIndex:2,pointerEvents:'none',background:'linear-gradient(180deg, rgba(7,8,13,.08), transparent 22%, transparent 78%, rgba(7,8,13,.22))'}} />
-                <iframe src={project.preview} title={project.title + ' live preview'} loading="lazy" style={{width:'100%',height:'100%',border:0,display:'block',background:'#0b0c12'}} />
-              </div>
-            ) : (
-              <div className="project-preview" style={{position:'relative',marginTop:'18px',aspectRatio:'16 / 9',overflow:'hidden',borderRadius:'15px',border:'1px solid rgba(255,255,255,.12)',background:'radial-gradient(circle at 50% 40%, rgba(110,91,255,.18), rgba(8,10,16,.96) 65%)',display:'flex',alignItems:'center',justifyContent:'center',textAlign:'center',padding:'30px'}}>
-                <div>
-                  <div style={{fontFamily:"'DM Mono', monospace",fontSize:'.7rem',letterSpacing:'.18em',textTransform:'uppercase',color:'#8e9aff',marginBottom:'12px'}}>Project Repository</div>
-                  <div style={{color:'#d9d7e8',fontSize:'1rem'}}>Explore the source code and project documentation on GitHub.</div>
-                </div>
-              </div>
-            )}
+            <div className="project-preview" style={{position:'relative',marginTop:'18px',aspectRatio:'16 / 9',overflow:'hidden',borderRadius:'15px',border:'1px solid rgba(255,255,255,.12)',background:'#080a10',boxShadow:'0 16px 45px rgba(0,0,0,.28)'}}>
+              <div style={{position:'absolute',inset:0,zIndex:2,pointerEvents:'none',background:'linear-gradient(180deg, rgba(7,8,13,.08), transparent 22%, transparent 78%, rgba(7,8,13,.22))'}} />
+              <iframe src={project.preview} title={project.title + ' live preview'} loading="lazy" style={{width:'100%',height:'100%',border:0,display:'block',background:'#0b0c12'}} />
+            </div>
 
             <div className="project-content" style={{marginTop:'22px'}}>
               <h3 style={{margin:'0 0 12px',fontSize:'clamp(1.55rem, 2.6vw, 2rem)',lineHeight:'1.08'}}>{project.title}</h3>
               <p>{project.description}</p>
               <div className="project-stack" style={{display:'flex',flexWrap:'wrap',gap:'8px',marginTop:'18px'}}>{project.stack.map(tech=><span key={tech} style={{padding:'7px 12px',borderRadius:'999px',border:'1px solid rgba(92, 105, 210, .35)',background:'rgba(65, 76, 174, .11)',color:'#a9adff',fontFamily:"'Manrope', sans-serif",fontSize:'.68rem'}}>{tech}</span>)}</div>
-              <div style={{display:'grid',gridTemplateColumns:project.demo?'1fr 1fr':'1fr',gap:'12px',marginTop:'22px'}}>
+              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'12px',marginTop:'22px'}}>
                 <a className="project-link" href={project.github} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(130,130,170,.45)',borderRadius:'11px',background:'rgba(255,255,255,.012)',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><GithubIcon />GitHub<span>↗</span></a>
-                {project.demo&&<a className="project-link demo-link" href={project.demo} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(124, 102, 255, .85)',borderRadius:'11px',background:'linear-gradient(135deg, rgba(104,82,255,.3), rgba(73,57,181,.15))',boxShadow:'0 0 24px rgba(103,80,255,.18), inset 0 0 20px rgba(133,110,255,.06)',color:'#d4ceff',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><ExternalIcon />Live Website<span>↗</span></a>}
+                <a className="project-link demo-link" href={project.demo} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(124, 102, 255, .85)',borderRadius:'11px',background:'linear-gradient(135deg, rgba(104,82,255,.3), rgba(73,57,181,.15))',boxShadow:'0 0 24px rgba(103,80,255,.18), inset 0 0 20px rgba(133,110,255,.06)',color:'#d4ceff',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><ExternalIcon />Live Website<span>↗</span></a>
               </div>
             </div>
           </article>
