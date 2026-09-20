@@ -2,20 +2,50 @@ const projects = [
   {
     number: '01',
     title: 'Intelligent Road Traffic Management System (IRTMS)',
-    description: 'An intelligent traffic management platform for real-time monitoring, congestion analysis, traffic prediction, route planning, alerts, analytics, and role-based access control.',
+    description: 'Developed during the Infosys Springboard Virtual Internship 7.0. An AI-powered traffic management platform for live monitoring, congestion analysis, traffic prediction, traffic-aware route planning, alerts, analytics, and role-based access control.',
     stack: ['React', 'FastAPI', 'Python', 'JWT', 'Leaflet', 'TomTom', 'Docker'],
     github: 'https://github.com/bru-reddy/Intelligent_Road_Traffic_Management_System',
     demo: 'https://intelligent-road-traffic-management-u87d.onrender.com/',
     preview: 'https://intelligent-road-traffic-management-u87d.onrender.com/',
+    label: 'Internship Project',
   },
   {
     number: '02',
-    title: 'Velora',
-    description: 'An AI-powered personalized menu recommendation system that adapts dish recommendations to a user’s mood, diet, budget, cravings, and preferences.',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'Puter.js', 'Grok', 'Local Storage'],
+    title: 'JobSphere — Job Portal & Recruitment System',
+    description: 'A Java full-stack recruitment platform with dedicated Candidate, Recruiter, and Company workspaces. Supports job discovery, applications, job posting, applicant management, company profiles, authentication, and skills-learning resources.',
+    stack: ['React', 'Vite', 'Java', 'Spring Boot', 'PostgreSQL', 'Spring Security'],
+    github: 'https://github.com/bru-reddy/Job_Portal_And_Recruitment_System',
+    demo: 'https://jobsphere-frontend-2x4k.onrender.com/',
+    preview: 'https://jobsphere-frontend-2x4k.onrender.com/',
+    label: 'Full Stack',
+  },
+  {
+    number: '03',
+    title: 'Cartiva — Online Shopping Website',
+    description: 'A MERN-stack marketplace connecting independent sellers with customers. Includes role-based authentication, product management, search and filtering, cart and checkout workflows, order tracking, seller notifications, and responsive interfaces.',
+    stack: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
+    github: 'https://github.com/bru-reddy/Online_Shopping_Website',
+    demo: 'https://cartiva-uzni.onrender.com/',
+    preview: 'https://cartiva-uzni.onrender.com/',
+    label: 'MERN Stack',
+  },
+  {
+    number: '04',
+    title: 'Velora — AI Menu Recommendation System',
+    description: 'An AI-powered personalized food discovery application that recommends dishes based on diet, cuisine, budget, spice level, meal type, calorie preference, allergies, and mood, with a secure backend API.',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'Gemini AI'],
     github: 'https://github.com/bru-reddy/Velora',
     demo: 'https://bru-reddy.github.io/Velora/',
     preview: 'https://bru-reddy.github.io/Velora/',
+    label: 'AI Application',
+  },
+  {
+    number: '05',
+    title: 'The Tales of History',
+    description: 'An interactive history and mythology learning platform featuring a searchable library, timelines, visual and documentary resources, contextual AI tutoring, summaries, exam notes, and related-topic exploration.',
+    stack: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'AI'],
+    github: 'https://github.com/bru-reddy/Tales-of-History',
+    label: 'Learning Platform',
   },
 ]
 
@@ -33,27 +63,39 @@ export default function Projects() {
       <div className="projects-hero-heading" style={{textAlign:'center',marginBottom:'54px'}}>
         <div style={{display:'inline-flex',alignItems:'center',gap:'12px',padding:'10px 22px',border:'1px solid rgba(125, 104, 255, .48)',borderRadius:'999px',color:'#bbaeff',fontFamily:"'DM Mono', monospace",fontSize:'.7rem',letterSpacing:'.2em',textTransform:'uppercase',background:'rgba(100, 75, 255, .045)',boxShadow:'0 0 28px rgba(105, 79, 255, .08)'}}><span style={{fontSize:'1rem'}}>⌁</span>Projects</div>
         <h2 style={{margin:'22px 0 12px',fontSize:'clamp(3rem, 6vw, 5rem)',lineHeight:'.95',letterSpacing:'-.075em',background:'linear-gradient(100deg, #f7f7fa 10%, #a99bff 80%)',WebkitBackgroundClip:'text',color:'transparent'}}>Projects</h2>
-        <p style={{margin:0,color:'#9696aa',fontSize:'1.05rem'}}>Real-world projects that combine problem-solving, design, and technology.</p>
+        <p style={{margin:0,color:'#9696aa',fontSize:'1.05rem'}}>Selected projects with live websites and source repositories.</p>
         <div style={{width:'145px',height:'2px',margin:'25px auto 0',background:'linear-gradient(90deg, transparent, #7465ff, transparent)',boxShadow:'0 0 14px rgba(116,101,255,.8)'}} />
       </div>
+
       <div className="projects-grid" style={{gridTemplateColumns:'repeat(2, minmax(0, 1fr))',gap:'28px'}}>
         {projects.map((project,index)=>(
-          <article className="project-card" key={project.title} data-reveal style={{'--delay':`${index*100}ms`,padding:'26px',minHeight:'0',borderColor:'rgba(93, 91, 185, .48)',borderRadius:'18px'}}>
+          <article className="project-card" key={project.title} data-reveal style={{'--delay': (index * 100) + 'ms',padding:'26px',minHeight:'0',borderColor:'rgba(93, 91, 185, .48)',borderRadius:'18px'}}>
             <div className="project-topline">
               <span className="project-index" style={{padding:'8px 16px',borderRadius:'999px',background:'rgba(74, 82, 180, .18)',color:'#8e9aff',fontSize:'.75rem'}}>{project.number}</span>
-              <span className="project-label" style={{padding:'8px 13px',borderRadius:'999px',border:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.025)',color:'#aaaab8'}}><span style={{color:'#6ee79b',marginRight:'7px'}}>●</span>Full Stack</span>
+              <span className="project-label" style={{padding:'8px 13px',borderRadius:'999px',border:'1px solid rgba(255,255,255,.08)',background:'rgba(255,255,255,.025)',color:'#aaaab8'}}><span style={{color:'#6ee79b',marginRight:'7px'}}>●</span>{project.label}</span>
             </div>
-            <div className="project-preview" style={{position:'relative',marginTop:'18px',aspectRatio:'16 / 9',overflow:'hidden',borderRadius:'15px',border:'1px solid rgba(255,255,255,.12)',background:'#080a10',boxShadow:'0 16px 45px rgba(0,0,0,.28)'}}>
-              <div style={{position:'absolute',inset:0,zIndex:2,pointerEvents:'none',background:'linear-gradient(180deg, rgba(7,8,13,.08), transparent 22%, transparent 78%, rgba(7,8,13,.22))'}} />
-              <iframe src={project.preview} title={`${project.title} live preview`} loading="lazy" style={{width:'100%',height:'100%',border:0,display:'block',background:'#0b0c12'}} />
-            </div>
+
+            {project.preview ? (
+              <div className="project-preview" style={{position:'relative',marginTop:'18px',aspectRatio:'16 / 9',overflow:'hidden',borderRadius:'15px',border:'1px solid rgba(255,255,255,.12)',background:'#080a10',boxShadow:'0 16px 45px rgba(0,0,0,.28)'}}>
+                <div style={{position:'absolute',inset:0,zIndex:2,pointerEvents:'none',background:'linear-gradient(180deg, rgba(7,8,13,.08), transparent 22%, transparent 78%, rgba(7,8,13,.22))'}} />
+                <iframe src={project.preview} title={project.title + ' live preview'} loading="lazy" style={{width:'100%',height:'100%',border:0,display:'block',background:'#0b0c12'}} />
+              </div>
+            ) : (
+              <div className="project-preview" style={{position:'relative',marginTop:'18px',aspectRatio:'16 / 9',overflow:'hidden',borderRadius:'15px',border:'1px solid rgba(255,255,255,.12)',background:'radial-gradient(circle at 50% 40%, rgba(110,91,255,.18), rgba(8,10,16,.96) 65%)',display:'flex',alignItems:'center',justifyContent:'center',textAlign:'center',padding:'30px'}}>
+                <div>
+                  <div style={{fontFamily:"'DM Mono', monospace",fontSize:'.7rem',letterSpacing:'.18em',textTransform:'uppercase',color:'#8e9aff',marginBottom:'12px'}}>Project Repository</div>
+                  <div style={{color:'#d9d7e8',fontSize:'1rem'}}>Explore the source code and project documentation on GitHub.</div>
+                </div>
+              </div>
+            )}
+
             <div className="project-content" style={{marginTop:'22px'}}>
               <h3 style={{margin:'0 0 12px',fontSize:'clamp(1.55rem, 2.6vw, 2rem)',lineHeight:'1.08'}}>{project.title}</h3>
               <p>{project.description}</p>
               <div className="project-stack" style={{display:'flex',flexWrap:'wrap',gap:'8px',marginTop:'18px'}}>{project.stack.map(tech=><span key={tech} style={{padding:'7px 12px',borderRadius:'999px',border:'1px solid rgba(92, 105, 210, .35)',background:'rgba(65, 76, 174, .11)',color:'#a9adff',fontFamily:"'Manrope', sans-serif",fontSize:'.68rem'}}>{tech}</span>)}</div>
               <div style={{display:'grid',gridTemplateColumns:project.demo?'1fr 1fr':'1fr',gap:'12px',marginTop:'22px'}}>
                 <a className="project-link" href={project.github} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(130,130,170,.45)',borderRadius:'11px',background:'rgba(255,255,255,.012)',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><GithubIcon />GitHub<span>↗</span></a>
-                {project.demo&&<a className="project-link demo-link" href={project.demo} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(124, 102, 255, .85)',borderRadius:'11px',background:'linear-gradient(135deg, rgba(104,82,255,.3), rgba(73,57,181,.15))',boxShadow:'0 0 24px rgba(103,80,255,.18), inset 0 0 20px rgba(133,110,255,.06)',color:'#d4ceff',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><ExternalIcon />Live Demo<span>↗</span></a>}
+                {project.demo&&<a className="project-link demo-link" href={project.demo} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(124, 102, 255, .85)',borderRadius:'11px',background:'linear-gradient(135deg, rgba(104,82,255,.3), rgba(73,57,181,.15))',boxShadow:'0 0 24px rgba(103,80,255,.18), inset 0 0 20px rgba(133,110,255,.06)',color:'#d4ceff',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><ExternalIcon />Live Website<span>↗</span></a>}
               </div>
             </div>
           </article>
