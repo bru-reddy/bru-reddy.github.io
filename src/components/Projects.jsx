@@ -39,6 +39,14 @@ const projects = [
     preview: 'https://bru-reddy.github.io/Velora/',
     label: 'AI Application',
   },
+  {
+    number: '05',
+    title: 'Tales of History',
+    description: 'An interactive history and mythology learning platform designed to make historical topics easier to explore through structured content, search, timelines, visual resources, related topics, and AI-powered tutoring concepts.',
+    stack: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'AI Integration'],
+    github: 'https://github.com/bru-reddy/Tales-of-History',
+    label: 'Educational Platform',
+  },
 ]
 
 function GithubIcon() {
@@ -55,7 +63,7 @@ export default function Projects() {
       <div className="projects-hero-heading" style={{textAlign:'center',marginBottom:'54px'}}>
         <div style={{display:'inline-flex',alignItems:'center',gap:'12px',padding:'10px 22px',border:'1px solid rgba(125, 104, 255, .48)',borderRadius:'999px',color:'#bbaeff',fontFamily:"'DM Mono', monospace",fontSize:'.7rem',letterSpacing:'.2em',textTransform:'uppercase',background:'rgba(100, 75, 255, .045)',boxShadow:'0 0 28px rgba(105, 79, 255, .08)'}}><span style={{fontSize:'1rem'}}>⌁</span>Projects</div>
         <h2 style={{margin:'22px 0 12px',fontSize:'clamp(3rem, 6vw, 5rem)',lineHeight:'.95',letterSpacing:'-.075em',background:'linear-gradient(100deg, #f7f7fa 10%, #a99bff 80%)',WebkitBackgroundClip:'text',color:'transparent'}}>Projects</h2>
-        <p style={{margin:0,color:'#9696aa',fontSize:'1.05rem'}}>Selected projects with live websites and source repositories.</p>
+        <p style={{margin:0,color:'#9696aa',fontSize:'1.05rem'}}>Selected projects with source repositories and live websites where available.</p>
         <div style={{width:'145px',height:'2px',margin:'25px auto 0',background:'linear-gradient(90deg, transparent, #7465ff, transparent)',boxShadow:'0 0 14px rgba(116,101,255,.8)'}} />
       </div>
 
@@ -78,7 +86,7 @@ export default function Projects() {
               <div className="project-stack" style={{display:'flex',flexWrap:'wrap',gap:'8px',marginTop:'18px'}}>{project.stack.map(tech=><span key={tech} style={{padding:'7px 12px',borderRadius:'999px',border:'1px solid rgba(92, 105, 210, .35)',background:'rgba(65, 76, 174, .11)',color:'#a9adff',fontFamily:"'Manrope', sans-serif",fontSize:'.68rem'}}>{tech}</span>)}</div>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'12px',marginTop:'22px'}}>
                 <a className="project-link" href={project.github} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(130,130,170,.45)',borderRadius:'11px',background:'rgba(255,255,255,.012)',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><GithubIcon />GitHub<span>↗</span></a>
-                <a className="project-link demo-link" href={project.demo} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(124, 102, 255, .85)',borderRadius:'11px',background:'linear-gradient(135deg, rgba(104,82,255,.3), rgba(73,57,181,.15))',boxShadow:'0 0 24px rgba(103,80,255,.18), inset 0 0 20px rgba(133,110,255,.06)',color:'#d4ceff',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><ExternalIcon />Live Website<span>↗</span></a>
+                {project.demo ? <a className="project-link demo-link" href={project.demo} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(124, 102, 255, .85)',borderRadius:'11px',background:'linear-gradient(135deg, rgba(104,82,255,.3), rgba(73,57,181,.15))',boxShadow:'0 0 24px rgba(103,80,255,.18), inset 0 0 20px rgba(133,110,255,.06)',color:'#d4ceff',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><ExternalIcon />Live Website<span>↗</span></a> : <a className="project-link" href={project.github} target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'10px',margin:0,minHeight:'48px',border:'1px solid rgba(130,130,170,.45)',borderRadius:'11px',background:'rgba(255,255,255,.012)',fontFamily:"'Manrope', sans-serif",fontSize:'.82rem'}}><ExternalIcon />Repository<span>↗</span></a>}
               </div>
             </div>
           </article>
