@@ -45,6 +45,8 @@ const projects = [
     description: 'An interactive history and mythology learning platform designed to make historical topics easier to explore through structured content, search, timelines, visual resources, related topics, and AI-powered tutoring concepts.',
     stack: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'AI Integration'],
     github: 'https://github.com/bru-reddy/Tales-of-History',
+    demo: 'https://tales-of-history-1.onrender.com/',
+    preview: 'https://tales-of-history-1.onrender.com/',
     label: 'Educational Platform',
   },
 ]
