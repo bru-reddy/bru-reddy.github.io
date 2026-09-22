@@ -11,6 +11,10 @@ import Footer from './components/Footer'
 
 export default function App() {
   useEffect(() => {
+    // Always open the portfolio at the top instead of restoring the previous scroll position.
+    if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'
+    window.scrollTo(0, 0)
+
     const elements = document.querySelectorAll('[data-reveal]')
 
     const observer = new IntersectionObserver(
